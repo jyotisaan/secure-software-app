@@ -76,10 +76,3 @@ jobs:
           TAG="${{ env.OS_NAME }}-${{ env.OS_VERSION }}-cis${{ env.CIS_VERSION }}-hardening-${TIMESTAMP}"
           mkdir -p reports
           trivy image "${TAG}:latest" --format json -o reports/trivy-${TAG}.json --severity HIGH,CRITICAL || true
-
-      - name: 📊 Upload scan reports
-        uses: actions/upload-artifact@v4
-        with:
-          name: rhel-security-reports
-          path: reports/
-          retention-days: 30

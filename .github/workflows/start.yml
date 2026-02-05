@@ -28,6 +28,7 @@ jobs:
 
       - name: 📦 Install Packer via binary (no APT)
         run: |
+          PACKER_VERSION="1.11.2"
           echo "📦 Installing HashiCorp Packer v${PACKER_VERSION} (binary)..."
           curl -fsSL "https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_linux_amd64.zip" -o packer.zip
           sudo unzip -o packer.zip -d /usr/local/bin/

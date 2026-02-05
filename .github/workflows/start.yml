@@ -30,7 +30,7 @@ jobs:
         run: |
           PACKER_VERSION="1.11.2"
           echo "📦 Installing HashiCorp Packer v${PACKER_VERSION} (binary)..."
-          curl -fsSL "https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_linux_amd64.zip" -o packer.zip
+          curl -fsSL "https://releases.hashicorp.com/packer/1.11.2/packer_1.11.2_linux_amd64.zip" -o packer.zip
           sudo unzip -o packer.zip -d /usr/local/bin/
           rm -f packer.zip
           packer version

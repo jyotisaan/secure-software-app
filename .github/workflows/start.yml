@@ -8,7 +8,11 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      PACKER_VERSION: "1.11.2"  # or your desired version
+      OS_NAME: "rhel"
+      OS_VERSION: "9"
+      CIS_VERSION: "1.5"
+      AWS_REGION: "ap-south-1"
+      PACKER_VERSION: "1.14.2"
     
     steps:
       - name: 🧾 Checkout repository

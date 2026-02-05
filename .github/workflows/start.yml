@@ -6,6 +6,9 @@ on:
 jobs:
   build-rhel:
     runs-on: ubuntu-latest
+
+    env:
+      PACKER_VERSION: "1.11.2"  # or your desired version
     
     steps:
       - name: 🧾 Checkout repository
